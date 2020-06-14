@@ -1,0 +1,11 @@
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\bin\Debug\netcoreapp3.1\MelodyConsoleClient.exe
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\bin\Debug\netcoreapp3.1\MelodyConsoleClient.deps.json
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\bin\Debug\netcoreapp3.1\MelodyConsoleClient.runtimeconfig.json
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\bin\Debug\netcoreapp3.1\MelodyConsoleClient.runtimeconfig.dev.json
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\bin\Debug\netcoreapp3.1\MelodyConsoleClient.dll
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\bin\Debug\netcoreapp3.1\MelodyConsoleClient.pdb
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\obj\Debug\netcoreapp3.1\MelodyConsoleClient.csprojAssemblyReference.cache
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\obj\Debug\netcoreapp3.1\MelodyConsoleClient.AssemblyInfoInputs.cache
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\obj\Debug\netcoreapp3.1\MelodyConsoleClient.AssemblyInfo.cs
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\obj\Debug\netcoreapp3.1\MelodyConsoleClient.dll
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyConsoleClient\obj\Debug\netcoreapp3.1\MelodyConsoleClient.pdb

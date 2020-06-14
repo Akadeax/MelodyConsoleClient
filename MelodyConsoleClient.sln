@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelodyConsoleClient", "MelodyConsoleClient\MelodyConsoleClient.csproj", "{B2A21713-B6F3-4A1F-B2D0-740816FCAA66}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2A21713-B6F3-4A1F-B2D0-740816FCAA66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2A21713-B6F3-4A1F-B2D0-740816FCAA66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2A21713-B6F3-4A1F-B2D0-740816FCAA66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2A21713-B6F3-4A1F-B2D0-740816FCAA66}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A340BFE-D2C1-41E6-B40C-5CE345A42EA5}
+	EndGlobalSection
+EndGlobal
