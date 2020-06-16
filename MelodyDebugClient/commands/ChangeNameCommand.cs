@@ -13,15 +13,8 @@ namespace MelodyConsoleClient
         protected override bool OnCommand(ConsoleKeyInfo pressed)
         {
             Console.Write("Enter new Name: ");
-            if (int.TryParse(Console.ReadLine(), out int newBPM))
-            {
-                client.currentBPM = newBPM;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            client.currentName = Console.ReadLine();
+            return true;
         }
     }
 }

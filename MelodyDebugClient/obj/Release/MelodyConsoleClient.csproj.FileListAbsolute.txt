@@ -1,0 +1,3 @@
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\obj\release\MelodyConsoleClient.csprojAssemblyReference.cache
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\obj\release\MelodyConsoleClient.exe
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\obj\release\MelodyConsoleClient.pdb

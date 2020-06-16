@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\MelodyConsoleClient",
+    "\\MelodyDebugClient",
+    "\\MelodyDebugClient\\commands",
+    "\\MelodyDebugClient\\util"
+  ],
+  "SelectedNode": "\\MelodyDebugClient\\Client.cs",
+  "PreviewInSolutionExplorer": false
+}
