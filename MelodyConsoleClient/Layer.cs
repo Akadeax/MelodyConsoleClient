@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MelodyConsoleClient
 {
-    class Layer
+    public class Layer
     {
         public const int WIDTH = 50;
         public const int HEIGHT = 25;
@@ -21,10 +21,10 @@ namespace MelodyConsoleClient
                 tone = tone.Replace('S', '#');
                 gridRows[i] = $"{tone} | {gridRows[i]}";
             }
-
+            
             foreach(string s in gridRows)
             {
-                Console.WriteLine(s);
+                ColorPrint.WriteLineColored(s);
             }
         }
     }

@@ -1,23 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MelodyConsoleClient
 {
-    class ChangeLayerCommand : Command
+    class LayerCommand : Command
     {
-        public ChangeLayerCommand(Client client) : base(client) { }
+        public LayerCommand(Client client) : base(client) { }
 
         protected override bool OnCommand(ConsoleKeyInfo pressed)
         {
-            Console.Write("[c (change)/a (add)/d (delete)/l (list): ");
-            var sub = Console.ReadKey(true);
+            Console.Write("Layer [c (change)/a (add)/d (delete)/l (list)/Esc (Exit)]: ");
+            var sub = Console.ReadKey(false);
             Console.WriteLine();
             switch(sub.Key)
             {
                 case ConsoleKey.C:
                     Console.Write("Enter the name of the layer: ");
-                    string newSelection = Console.ReadLine();
+                    string newSelection = Console.ReadLine().ToLower();
 
                     if (!client.layers.ContainsKey(newSelection)) return false;
 
@@ -26,8 +27,9 @@ namespace MelodyConsoleClient
 
                 case ConsoleKey.A:
                     Console.Write("Enter the name of the new layer: ");
-                    string newLayerName = Console.ReadLine();
+                    string newLayerName = Console.ReadLine().ToLower();
 
+                    // if layer already exists
                     if (client.layers.ContainsKey(newLayerName)) return false;
 
                     client.layers.Add(newLayerName, new Layer());
@@ -35,9 +37,14 @@ namespace MelodyConsoleClient
 
                 case ConsoleKey.D:
                     Console.Write("Enter the name of the layer to delete: ");
-                    string toDelete = Console.ReadLine();
+                    string toDelete = Console.ReadLine().ToLower();
 
+                    // if layer to delete doesn't exist/is last layer
                     if (!client.layers.ContainsKey(toDelete)) return false;
+                    if (client.layers.Count <= 1) return false;
+
+                    // reset to default layer if client is deleting the layer they're currently on
+                    if (client.selectedLayer == toDelete) client.selectedLayer = client.layers.First().Key;
 
                     client.layers.Remove(toDelete);
                     break;

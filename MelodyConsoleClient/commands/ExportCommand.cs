@@ -36,7 +36,10 @@ namespace MelodyConsoleClient
             }
             encoded.Length -= 1;
 
-            File.WriteAllText(path, encoded.ToString());
+            string finalPath = path;
+            if (!path.EndsWith(".melody")) finalPath += ".melody";
+
+            File.WriteAllText(finalPath, encoded.ToString());
             return true;
         }
 

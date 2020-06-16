@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MelodyConsoleClient
 {
-    struct Vec2
+    public struct Vec2
     {
         public int x, y;
 

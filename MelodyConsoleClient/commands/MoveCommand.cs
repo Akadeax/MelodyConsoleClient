@@ -13,17 +13,17 @@ namespace MelodyConsoleClient
             switch(pressed.Key)
             {
                 case ConsoleKey.UpArrow:
-                    client.cursorPos.y = Math.Clamp(--client.cursorPos.y, 0, Layer.HEIGHT);
+                    client.cursorPos.y = Math.Clamp(--client.cursorPos.y, 0, Layer.HEIGHT - 1);
                     break;
                 case ConsoleKey.DownArrow:
-                    client.cursorPos.y = Math.Clamp(++client.cursorPos.y, 0, Layer.HEIGHT);
+                    client.cursorPos.y = Math.Clamp(++client.cursorPos.y, 0, Layer.HEIGHT - 1);
                     break;
 
                 case ConsoleKey.LeftArrow:
-                    client.cursorPos.x = Math.Clamp(--client.cursorPos.x, 0, Layer.HEIGHT);
+                    client.cursorPos.x = Math.Clamp(--client.cursorPos.x, 0, Layer.WIDTH - 1);
                     break;
                 case ConsoleKey.RightArrow:
-                    client.cursorPos.x = Math.Clamp(++client.cursorPos.x, 0, Layer.HEIGHT);
+                    client.cursorPos.x = Math.Clamp(++client.cursorPos.x, 0, Layer.WIDTH - 1);
                     break;
                 default:
                     return false;

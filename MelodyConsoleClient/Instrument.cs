@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MelodyConsoleClient
@@ -7,20 +8,22 @@ namespace MelodyConsoleClient
     public enum Instrument
     {
         Pause,
-        Piano
+        Piano,
+        Bell
     }
 
     public class InstrumentUtil
     {
-        private static readonly Dictionary<Instrument, char> instrumentSymbols = new Dictionary<Instrument, char>()
+        private static readonly Dictionary<Instrument, string> instrumentColorCodes = new Dictionary<Instrument, string>()
         {
-            { Instrument.Pause, '-' },
-            { Instrument.Piano, '#' },
+            { Instrument.Pause, "&1" },
+            { Instrument.Piano, "&2" },
+            { Instrument.Bell, "&3" },
         };
 
-        public static char GetSymbol(Instrument i)
+        public static string GetColorCode(Instrument i)
         {
-            return instrumentSymbols[i];
+            return instrumentColorCodes[i];
         }
 
         public static bool IsPlayable(Instrument instrument)
@@ -28,16 +31,22 @@ namespace MelodyConsoleClient
             return ((int)instrument) >= 1;
         }
 
-
-        private static readonly Dictionary<Instrument, string> instrumentNames = new Dictionary<Instrument, string>()
+        public static readonly BiMap<Instrument, string> instrumentNames = new BiMap<Instrument, string>()
         {
             { Instrument.Pause, "PAUSE" },
             { Instrument.Piano, "PIANO" },
+            { Instrument.Bell, "BELL" },
         };
 
         public static string GetInstrumentName(Instrument inst)
         {
-            return instrumentNames[inst];
+            return instrumentNames.Forward[inst];
         }
+
+        public static string[] GetInstrumentNames()
+        {
+            return instrumentNames.Forward.Values;
+        }
+
     }
 }

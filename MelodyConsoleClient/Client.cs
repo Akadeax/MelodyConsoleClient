@@ -1,20 +1,31 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace MelodyConsoleClient
 {
-    class Client
+    public class Client
     {
+        [STAThread]
         static void Main()
-            => new Client().Start();
+        {
+            new Client().Start();
+        }
 
+        [JsonIgnore]
         public int selectedInstrument = 1;
+
 
         public Vec2 cursorPos = new Vec2();
 
-        public SortedDictionary<string, Layer> layers = new SortedDictionary<string, Layer>();
+
+        public Dictionary<string, Layer> layers = new Dictionary<string, Layer>();
+
+        [JsonIgnore]
         public string selectedLayer = "default";
 
+        [JsonIgnore]
         public Layer SelectedLayer
         {
             get
@@ -23,9 +34,10 @@ namespace MelodyConsoleClient
             }
         }
 
+        [JsonIgnore]
         readonly Dictionary<ConsoleKey, Command> commands;
 
-        Client()
+        public Client()
         {
             layers.Add("default", new Layer());
 
@@ -38,12 +50,17 @@ namespace MelodyConsoleClient
                 { ConsoleKey.RightArrow, moveCommand },
 
                 { ConsoleKey.Spacebar, new ToggleNoteCommand(this) },
-                { ConsoleKey.L, new ChangeLayerCommand(this) },
+                { ConsoleKey.L, new LayerCommand(this) },
                 { ConsoleKey.E, new ExportCommand(this) },
+                { ConsoleKey.I, new InstrumentCommand(this) },
+                { ConsoleKey.C, new CursorCommand(this) },
+                { ConsoleKey.S, new SaveLoadCommand(this) },
+
+                { ConsoleKey.H, new HelpCommand() },
             };
         }
 
-        void Start()
+        public void Start()
         {
 
             while (true)

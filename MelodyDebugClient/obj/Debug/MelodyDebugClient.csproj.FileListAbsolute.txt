@@ -1,0 +1,9 @@
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\obj\Debug\MelodyDebugClient.csprojAssemblyReference.cache
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\bin\Debug\MelodyDebugClient.exe.config
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\bin\Debug\MelodyDebugClient.exe
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\bin\Debug\MelodyDebugClient.pdb
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\bin\Debug\Newtonsoft.Json.dll
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\bin\Debug\Newtonsoft.Json.xml
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\obj\Debug\MelodyDebugClient.csproj.CopyComplete
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\obj\Debug\MelodyDebugClient.exe
+D:\dev\Programming\CrossProjects\MelodyProject\MelodyConsoleClient\MelodyDebugClient\obj\Debug\MelodyDebugClient.pdb

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace MelodyConsoleClient
 {
-    class Grid
+    public class Grid
     {
-        private int[,] grid;
+        public int[,] grid;
 
         private readonly int WIDTH, HEIGHT;
         public Grid(int width, int height)
@@ -14,23 +14,30 @@ namespace MelodyConsoleClient
             WIDTH = width;
             HEIGHT = height;
 
-            grid = new int[WIDTH, HEIGHT];
+            if (grid == null)
+            {
+                grid = new int[WIDTH, HEIGHT];
+            }
         }
 
         public string[] ToRowStrings(Vec2 cursorPos)
         {
             string[] output = new string[HEIGHT];
-            for(int x = 0; x < WIDTH; x++)
+            for (int x = 0; x < WIDTH; x++)
             {
-                for(int y = 0; y < HEIGHT; y++)
+                for (int y = 0; y < HEIGHT; y++)
                 {
-                    if(cursorPos.x == x && cursorPos.y == y)
+                    if (cursorPos.x == x && cursorPos.y == y)
                     {
                         output[y] += "+ ";
                     }
+                    else if (grid[x,y] == (int)Instrument.Pause)
+                    {
+                        output[y] += "- ";
+                    }
                     else
                     {
-                        output[y] += InstrumentUtil.GetSymbol((Instrument)grid[x, y]) + " ";
+                        output[y] += InstrumentUtil.GetColorCode((Instrument)grid[x,y]) + "# ";
                     }
                 }
             }
@@ -39,11 +46,11 @@ namespace MelodyConsoleClient
 
         public void SetValue(Vec2 pos, int val)
         {
-            grid[pos.x, pos.y] = val;
+            grid[pos.x,pos.y] = val;
         }
         public int GetValue(Vec2 pos)
         {
-            return grid[pos.x, pos.y];
+            return grid[pos.x,pos.y];
         }
     }
 }
